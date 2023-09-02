@@ -1,0 +1,25 @@
+server:
+  error:
+    include-stacktrace: on_param
+
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3308/film?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    #show-sql: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type: trace
